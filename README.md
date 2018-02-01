@@ -1,0 +1,3 @@
+# webpackvue
+
+npm run build
