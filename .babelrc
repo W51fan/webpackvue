@@ -1,0 +1,8 @@
+{
+    "presets":[
+        "env"
+    ],
+    "plguins":[
+        "transform-vue-jsx"
+    ]
+}
