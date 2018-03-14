@@ -2,7 +2,7 @@
 	<div id="map"></div>
 </template>
 <script>
-    import ol from '../assets/lib/ol.js';
+    import ol from '../assets/libs/ol.js';
     import '../assets/styles/ol.css';
     export default{
         mounted: function () {

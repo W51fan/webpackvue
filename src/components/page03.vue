@@ -2,19 +2,18 @@
 	<div id="map"></div>
 </template>
 <script>
-    import ol from '../assets/lib/ol.js';
+    import ol from '../assets/libs/ol.js';
     import '../assets/styles/ol.css';
     export default{
         mounted: function () {
-            let bingMap = new ol.layer.Tile({
-                source: new ol.source.BingMaps({
-                    key: 'AkjzA7OhS4MIBjutL21bkAop7dc41HSE0CNTR5c6HJy8JKc7U9U9RveWJrylD3XJ',
-                    imagerySet: 'Road'
+            let googleMapLayer = new ol.layer.Tile({
+                source: new ol.source.XYZ({
+                   url:"http://mt0.google.cn/vt/lyrs=m@1&hl=zh-CN&gl=cn&x={x}&y={y}&z={z}&s=Galil"  
                 })
-            });
+            })
 			let map = new ol.Map({
 				layers: [
-					bingMap
+					googleMapLayer
 				],
 				target: 'map',
 				view: new ol.View({
