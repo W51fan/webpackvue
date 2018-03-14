@@ -1,36 +1,34 @@
 <template>
 	<div id="app">
-		<div id="cover"></div>
-		<HEADER></HEADER>
+		<Header></Header>
+		<Nav></Nav>	
 	</div>
 </template>
 
 <script>
-import HEADER from './todo/header.vue'
+import Header from './common/header.vue'
+import Nav from './common/nav.vue'
+
+
 
 export default{
 	components:{
-		HEADER,
-	}	
+		Header,
+		Nav
+	}
 }
 </script>
 
 <style lang="stylus" scoped>
-#app{
-	position absolute
-	left 0
-	right 0
-	top 0
-	bottom 0
-}
-#cover{
-	position absolute
-	left 0
-	top 0
-	right 0
-	bottom 0
-	background-color #999
-	opacity .9
-	z-index -1
-}
+	#app {
+		position absolute 
+		right 0 
+		top 0 
+		bottom 0
+		width 90%
+		position: absolute;
+    	top: 32%;
+    	left: 50%;
+    	transform: translate(-50%, -50%);
+	}	
 </style>
