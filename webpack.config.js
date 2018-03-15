@@ -23,6 +23,30 @@ const config = {
 				]
 			},
 			{
+				test: /\.jsx$/,
+				loader: 'babel-loader',
+				// options: {
+				// 	presets: ["env"],
+				// 	plugins: [
+				// 		"transform-vue-jsx"
+				// 	]
+				// },
+			},
+			{
+				test: /\.styl$/,
+				use: [
+					'style-loader',
+					'css-loader',
+					{
+						loader: 'postcss-loader',
+						options: {
+							sourceMap: true
+						}
+					},
+					'stylus-loader'
+				]
+			},
+			{
 				test:/\.(gif||jpg||jpeg||png||svg)$/,
 				use:[
 					{
