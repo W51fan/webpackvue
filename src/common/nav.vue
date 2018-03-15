@@ -1,9 +1,11 @@
 <template>
 	<div class="real-app">
-		<router-link to="/Page01">高德地图</router-link>
-		<router-link to="/Page02">百度地图</router-link>
-    <router-link to="/Page03">谷歌地图</router-link>
-    <router-link to="/Page04">必应地图</router-link>
+    <div class="navwrapper">
+        <router-link to="/Page01" class="nav"><span>高德地图</span></router-link>
+        <router-link to="/Page02" class="nav"><span>百度地图</span></router-link>
+        <router-link to="/Page03" class="nav"><span>谷歌地图</span></router-link>
+        <router-link to="/Page04" class="nav"><span>必应地图</span></router-link>
+    </div>
 		<router-view></router-view>
 	</div>
 </template>
@@ -38,4 +40,21 @@ export default {
     box-shadow: 0 0 5px #666
     padding: 10px
 	}
+  .navwrapper{
+    padding: 10px
+    text-align: left
+  }
+  .nav{
+    
+    margin:10px
+    padding: 5px
+    background: #1030b04d;
+    text-decoration:none
+  }
+  .router-link-active>span {
+    background: antiquewhite
+    padding: 5px
+    margin: -5px
+  }
+ 
 </style>
