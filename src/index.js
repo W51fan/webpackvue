@@ -3,9 +3,9 @@ import VueRouter from 'vue-router'
 import App from './app.vue'
 import router from './router/router.js'
 
-import './assets/styles/global.styl'
-import './assets/styles/test-stylus.styl'
-import './assets/images/btbg.png'
+//import './assets/styles/global.styl'
+// import './assets/styles/test-stylus.styl'
+// import './assets/images/demo.jpg'
 
 
 
