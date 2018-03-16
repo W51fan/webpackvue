@@ -1,34 +1,28 @@
 <template>
 	<div id="app">
-		<Header></Header>
-		<Nav></Nav>	
+		<layouts></layouts>	
 	</div>
 </template>
 
 <script>
-import Header from './common/header.vue'
-import Nav from './common/nav.vue'
+import layouts from './components/layouts.vue'
 
 
 
 export default{
 	components:{
-		Header,
-		Nav
+		layouts
 	}
 }
 </script>
 
 <style lang="stylus" scoped>
-	#app {
-		position absolute 
-		right 0 
-		top 0 
-		bottom 0
+	#app { 
 		width 90%
+		height 100%
 		position: absolute;
-    	top: 32%;
-    	left: 50%;
-    	transform: translate(-50%, -50%);
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}	
 </style>
