@@ -1,11 +1,6 @@
 <template>
-	<div id="left">
-		<div class="navwrapper">
-			<router-link to="/Page01" class="nav"><span>高德地图</span></router-link>
-			<router-link to="/Page02" class="nav"><span>百度地图</span></router-link>
-			<router-link to="/Page03" class="nav"><span>谷歌地图</span></router-link>
-			<router-link to="/Page04" class="nav"><span>必应地图</span></router-link>
-		</div>
+	<div id="right">
+		<router-view></router-view>
 	</div>
 </template>
 <script>
@@ -34,9 +29,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-	#left {
-		float: left 
-        width: 19% 
+	#right {
+		float: right 
+        width: 80% 
         height: 300px 
         background: aquamarine
 	}
