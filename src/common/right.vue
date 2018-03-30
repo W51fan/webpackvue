@@ -1,7 +1,10 @@
 <template>
-	<div id="right">
+	<!-- <div id="right">
 		<router-view></router-view>
-	</div>
+	</div> -->
+    <div class="continer">
+            <router-view></router-view>
+    </div>
 </template>
 <script>
 import Page01 from '../components/page01.vue'
@@ -57,4 +60,7 @@ export default {
     .nav.router-link-active  {
 		background: antiquewhite 
 	}
+    .continer {
+        padding-left: 320px;
+    }
 </style>
