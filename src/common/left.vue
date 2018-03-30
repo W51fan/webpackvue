@@ -1,18 +1,10 @@
 <template>
-	<div id="left">
-		<div class="navwrapper">
-			<router-link to="/Page01" class="nav"><span>高德地图</span></router-link>
-			<router-link to="/Page02" class="nav"><span>百度地图</span></router-link>
-			<router-link to="/Page03" class="nav"><span>谷歌地图</span></router-link>
-			<router-link to="/Page04" class="nav"><span>必应地图</span></router-link>
-		</div>
-	</div>
+	<div class="side-bar">
+        <Tree-view></Tree-view>
+    </div>
 </template>
 <script>
-import Page01 from '../components/page01.vue'
-import Page02 from '../components/page02.vue'
-import Page03 from '../components/page03.vue'
-import Page04 from '../components/page04.vue'
+import TreeView from "../components/TreeView.vue";
 
 export default {
   data(){
@@ -21,10 +13,7 @@ export default {
     }
   },
   components:{
-   Page01,
-   Page02,
-   Page03,
-   Page04,
+	TreeView
   },
   methods:{
     
@@ -61,5 +50,16 @@ export default {
 	}
     .nav.router-link-active  {
 		background: antiquewhite 
+	}
+
+	.side-bar {
+	width: 300px;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	font-size: 14px;
+	position: absolute;
+	top: 0;
+	left: 0;
 	}
 </style>
