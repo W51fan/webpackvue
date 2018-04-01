@@ -50,7 +50,11 @@
 				view: new ol.View({
 					center: [12959773,4853101],
 					zoom: 12
-				})
+                }),
+                controls: ol.control.defaults({
+								zoom: false,
+								attribution: false
+				}),
 			});
 		},	
     }

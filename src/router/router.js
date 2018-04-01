@@ -6,6 +6,7 @@ import Page01 from '../components/page01.vue'
 import Page02 from '../components/page02.vue'
 import Page03 from '../components/page03.vue'
 import Page04 from '../components/page04.vue'
+import Page05 from '../components/page05.vue'
 Vue.use(Router)
 export default new Router({
   linkActiveClass: 'selected',
@@ -77,7 +78,7 @@ export default new Router({
     {
       path: '/detail/architecture',
       name: 'architecture',
-      component: TreeViewDetail
+      component: Page05
     },
     {
       path: '/detail/displaying-data',
