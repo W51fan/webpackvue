@@ -7,10 +7,7 @@
     </div>
 </template>
 <script>
-import Page01 from '../components/page01.vue'
-import Page02 from '../components/page02.vue'
-import Page03 from '../components/page03.vue'
-import Page04 from '../components/page04.vue'
+
 
 export default {
   data(){
@@ -19,10 +16,7 @@ export default {
     }
   },
   components:{
-   Page01,
-   Page02,
-   Page03,
-   Page04,
+ 
   },
   methods:{
     
