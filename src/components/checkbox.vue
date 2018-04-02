@@ -8,8 +8,8 @@
 <script>
 export default {
     name:"Mycheckbox",
-    data(){
-        
+    data:function(){
+        return{}
     },
     model: {
         prop: 'checked',

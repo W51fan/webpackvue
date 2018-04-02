@@ -29,7 +29,7 @@ import Singlebox from "./singlebox.vue";
             Mycheckbox,
             Singlebox
         },
-        data(){
+        data:function(){
             return {
                 msg:"hreo",
                 color:"color",

@@ -8,8 +8,8 @@
 <script>
 export default {
     name:"Singlebox",
-    data(){
-        
+    data:function(){
+        return{}
     },
     model: {
         prop: 'checked',
