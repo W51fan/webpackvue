@@ -1,7 +1,7 @@
 <template>
     <div>
         <h3>
-            这里是{{currentRoute}}导航详情
+            这里是{{currentRoute}}内容详情
         </h3>
         <router-view></router-view>
     </div>

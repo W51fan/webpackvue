@@ -26,26 +26,26 @@ let menus = [
       isSelected: false,
       subMenu: [
         { id: 31, level: 2, name: '架构', type: "link", url: "/detail/architecture" },
-        {
-          id: 32,
-          level: 2,
-          name: '模板与数据绑定',
-          type: "button",
-          isExpanded: false,
-          isSelected: false,
-          subMenu: [
-            { id: 321, level: 3, name: '显示数据', type: "link", url: "/detail/displaying-data" },
-            { id: 322, level: 3, name: '模板语法', type: "link", url: "/detail/template-syntax" },
-            { id: 323, level: 3, name: '生命周期钩子', type: "link", url: "/detail/lifecycle-hooks" },
-            { id: 324, level: 3, name: '组件交互', type: "link", url: "/detail/component-interaction" },
-            { id: 325, level: 3, name: '组件样式', type: "link", url: "/detail/component-styles" },
-            { id: 326, level: 3, name: '动态组件', type: "link", url: "/detail/dynamic-component-loader" },
-            { id: 327, level: 3, name: '属性型指令', type: "link", url: "/detail/attribute-directives" },
-            { id: 328, level: 3, name: '结构型指令', type: "link", url: "/detail/structural-directives" },
-            { id: 329, level: 3, name: '管道', type: "link", url: "/detail/pipes" },
-            { id: 3210, level: 3, name: '动画', type: "link", url: "/detail/animations" },
-          ]
-        },
+        // {
+        //   id: 32,
+        //   level: 2,
+        //   name: '模板与数据绑定',
+        //   type: "button",
+        //   isExpanded: false,
+        //   isSelected: false,
+        //   subMenu: [
+        //     { id: 321, level: 3, name: '显示数据', type: "link", url: "/detail/displaying-data" },
+        //     { id: 322, level: 3, name: '模板语法', type: "link", url: "/detail/template-syntax" },
+        //     { id: 323, level: 3, name: '生命周期钩子', type: "link", url: "/detail/lifecycle-hooks" },
+        //     { id: 324, level: 3, name: '组件交互', type: "link", url: "/detail/component-interaction" },
+        //     { id: 325, level: 3, name: '组件样式', type: "link", url: "/detail/component-styles" },
+        //     { id: 326, level: 3, name: '动态组件', type: "link", url: "/detail/dynamic-component-loader" },
+        //     { id: 327, level: 3, name: '属性型指令', type: "link", url: "/detail/attribute-directives" },
+        //     { id: 328, level: 3, name: '结构型指令', type: "link", url: "/detail/structural-directives" },
+        //     { id: 329, level: 3, name: '管道', type: "link", url: "/detail/pipes" },
+        //     { id: 3210, level: 3, name: '动画', type: "link", url: "/detail/animations" },
+        //   ]
+        // },
         {
           id: 33,
           level: 2,
@@ -61,36 +61,36 @@ let menus = [
             { name: '动态表单', type: "link", url: "/detail/dynamic-form" }
           ]
         },
-        { id: 34, level: 2, name: '引用启动', type: "link", url: "/detail/bootstrapping" },
+        { id: 34, level: 2, name: '3', type: "link", url: "/detail/bootstrapping" },
         {
           id: 35,
           level: 2,
-          name: 'NgModules',
+          name: '4',
           type: "button",
           isExpanded: false,
           isSelected: false,
           subMenu: [
-            { id: 341, level: 3, name: 'NgModule', type: "link", url: "/detail/ngmodule" },
-            { id: 342, level: 3, name: 'NgModule 常见问题', type: "link", url: "/detail/ngmodule-faq" }
+            { id: 341, level: 3, name: '1', type: "link", url: "/detail/ngmodule" },
+            { id: 342, level: 3, name: '2', type: "link", url: "/detail/ngmodule-faq" }
           ]
         },
         {
           id: 36,
           level: 2,
-          name: '依赖注入',
+          name: '5',
           type: "button",
           isExpanded: false,
           isSelected: false,
           subMenu: [
-            { id: 361, level: 3, name: '依赖注入', type: "link", url: "/detail/dependency-injection" },
-            { id: 362, level: 3, name: '多级注入器', type: "link", url: "/detail/hierarchical-dependency-injection" },
-            { id: 363, level: 3, name: 'DI 实例技巧', type: "link", url: "/detail/dependency-injection-in-action" }
+            { id: 361, level: 3, name: '1', type: "link", url: "/detail/dependency-injection" },
+            { id: 362, level: 3, name: '2', type: "link", url: "/detail/hierarchical-dependency-injection" },
+            { id: 363, level: 3, name: '3', type: "link", url: "/detail/dependency-injection-in-action" }
           ]
         },
-        { id: 37, level: 2, name: 'HttpClient', type: "link", url: "/detail/http" },
-        { id: 38, level: 2, name: '路由与导航', type: "link", url: "/detail/router" },
-        { id: 39, level: 2, name: '测试', type: "link", url: "/detail/testing" },
-        { id: 310, level: 2, name: '速查表', type: "link", url: "/detail/cheatsheet" },
+        { id: 37, level: 2, name: '5', type: "link", url: "/detail/http" },
+        { id: 38, level: 2, name: '6', type: "link", url: "/detail/router" },
+        { id: 39, level: 2, name: '7', type: "link", url: "/detail/testing" },
+        { id: 310, level: 2, name: '8', type: "link", url: "/detail/cheatsheet" },
       ]
     },
     {
@@ -101,45 +101,45 @@ let menus = [
       isExpanded: false,
       isSelected: false,
       subMenu: [
-        { id: 41, level: 2, name: '国际化（i18n）', type: "link", url: "/detail/i18n" },
-        { id: 42, level: 2, name: '语言服务', type: "link", url: "/detail/language-service" },
-        { id: 43, level: 2, name: '安全', type: "link", url: "/detail/security" },
+        { id: 41, level: 2, name: '1', type: "link", url: "/detail/i18n" },
+        { id: 42, level: 2, name: '2', type: "link", url: "/detail/language-service" },
+        { id: 43, level: 2, name: '3', type: "link", url: "/detail/security" },
         {
           id: 44,
           level: 2,
-          name: '环境设置与部署',
+          name: '4',
           type: "button",
           isExpanded: false,
           isSelected: false,
           subMenu: [
-            { id: 441, level: 3, name: '搭建本地开发环境', type: "link", url: "/detail/setup" },
-            { id: 442, level: 3, name: '搭建方式剖析', type: "link", url: "/detail/setup-systemjs-anatomy" },
-            { id: 443, level: 3, name: '浏览器支持', type: "link", url: "/detail/browser-support" },
-            { id: 444, level: 3, name: 'npm 包', type: "link", url: "/detail/npm-packages" },
-            { id: 445, level: 3, name: 'TypeScript 配置', type: "link", url: "/detail/typescript-configuration" },
-            { id: 446, level: 3, name: '预 (AoT) 编译器', type: "link", url: "/detail/aot-compiler" },
-            { id: 447, level: 3, name: '预 (AoT) 编译器', type: "link", url: "/detail/metadata" },
-            { id: 448, level: 3, name: '部署', type: "link", url: "/detail/deployment" }
+            { id: 441, level: 3, name: '1', type: "link", url: "/detail/setup" },
+            { id: 442, level: 3, name: '2', type: "link", url: "/detail/setup-systemjs-anatomy" },
+            { id: 443, level: 3, name: '3', type: "link", url: "/detail/browser-support" },
+            { id: 444, level: 3, name: '4', type: "link", url: "/detail/npm-packages" },
+            { id: 445, level: 3, name: '5', type: "link", url: "/detail/typescript-configuration" },
+            { id: 446, level: 3, name: '6', type: "link", url: "/detail/aot-compiler" },
+            { id: 447, level: 3, name: '7', type: "link", url: "/detail/metadata" },
+            { id: 448, level: 3, name: '8', type: "link", url: "/detail/deployment" }
           ]
         },
         {
           id: 45,
           level: 2,
-          name: '升级',
+          name: '介绍',
           type: "button",
           isExpanded: false,
           isSelected: false,
           subMenu: [
-            { id: 451, level: 3, name: '从 AngularJS 升级', type: "link", url: "/detail/upgrade" },
-            { id: 452, level: 3, name: '升级速查表', type: "link", url: "/detail/ajs-quick-reference" }
+            { id: 451, level: 3, name: '1', type: "link", url: "/detail/upgrade" },
+            { id: 452, level: 3, name: '2', type: "link", url: "/detail/ajs-quick-reference" }
           ]
         },
-        { id: 46, level: 2, name: 'Visual Studio 2015 快速上手', type: "link", url: "/detail/visual-studio-2015" },
-        { id: 47, level: 2, name: '风格指南', type: "link", url: "/detail/styleguide" },
-        { id: 48, level: 2, name: '词汇表', type: "link", url: "/detail/glossary" }
+        { id: 46, level: 2, name: '7', type: "link", url: "/detail/visual-studio-2015" },
+        { id: 47, level: 2, name: '8', type: "link", url: "/detail/styleguide" },
+        { id: 48, level: 2, name: '9', type: "link", url: "/detail/glossary" }
       ]
     },
-    { id: 5, level: 1, name: 'API 参考手册', type: "link", url: "/detail/api" }
+    { id: 5, level: 1, name: '合作伙伴', type: "link", url: "/detail/api" }
   ];
   let levelNum = 1;
   let startExpand = []; // 保存刷新后当前要展开的菜单项
