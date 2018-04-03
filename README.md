@@ -4,6 +4,9 @@ npm run build ---正式环境
 
 npm run dev ---开发环境
 
+http://htmlpreview.github.io/?https://github.com/abc2888630/webpackvue/blob/master/dist/index.html#/
+
+
 #树形菜单
 
 是用递归的思想来实现
