@@ -44,7 +44,16 @@ import Singlebox from "./singlebox.vue";
         mounted: function () {},
         methods:{
             loadingdata(){
-                alert("ok");
+                let host = "http://"+location.host+'/';
+                console.log(host);
+                axios({
+                    method:'get',
+                    url:host+"src/jsons/test.json"
+                }).then(res=>{
+                    alert(res.data.text);
+                }).catch(error =>{
+                    alert(error);
+                });
             },
         },	
     }
