@@ -23,22 +23,26 @@ export default new Router({
     {
         path: '/gaode',
         name: 'gaode',
-        component: Page01
+        //component: Page01
+      component:resolve =>require(['../components/page01.vue'],resolve)
     },
     {
         path: '/baidu',
         name: 'baidu',
-        component: Page02
+        //component: Page02
+      component:resolve =>require(['../components/page02.vue'],resolve)
     },
     {
         path: '/guge',
         name: 'google',
-        component: Page03
+        //component: Page03
+      component:resolve =>require(['../components/page03.vue'],resolve)
     },
     {
         path: '/biying',
         name: 'biying',
-        component: Page04
+        //component: Page04
+      component:resolve =>require(['../components/page04.vue'],resolve)
     },
     {
       path: '/detail/tutorial',
@@ -78,7 +82,8 @@ export default new Router({
     {
       path: '/detail/architecture',
       name: 'architecture',
-      component: Page05
+      //component: Page05
+      component:resolve =>require(['../components/page05.vue'],resolve)
     },
     {
       path: '/detail/displaying-data',
