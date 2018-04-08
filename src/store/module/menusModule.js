@@ -65,26 +65,16 @@ let menus = [
         {
           id: 35,
           level: 2,
-          name: '4',
+          name: 'Echarts Demo',
           type: "button",
           isExpanded: false,
           isSelected: false,
           subMenu: [
-            { id: 341, level: 3, name: '1', type: "link", url: "/detail/ngmodule" },
-            { id: 342, level: 3, name: '2', type: "link", url: "/detail/ngmodule-faq" }
-          ]
-        },
-        {
-          id: 36,
-          level: 2,
-          name: '5',
-          type: "button",
-          isExpanded: false,
-          isSelected: false,
-          subMenu: [
-            { id: 361, level: 3, name: '1', type: "link", url: "/detail/dependency-injection" },
-            { id: 362, level: 3, name: '2', type: "link", url: "/detail/hierarchical-dependency-injection" },
-            { id: 363, level: 3, name: '3', type: "link", url: "/detail/dependency-injection-in-action" }
+            { id: 341, level: 3, name: '折线图', type: "link", url: "/detail/ngmodule" },
+            { id: 342, level: 3, name: '饼形图', type: "link", url: "/detail/ngmodule-faq" },
+            { id: 361, level: 3, name: '散点图', type: "link", url: "/detail/dependency-injection" },
+            { id: 362, level: 3, name: '雷达图', type: "link", url: "/detail/hierarchical-dependency-injection" },
+            { id: 363, level: 3, name: '仪表盘', type: "link", url: "/detail/dependency-injection-in-action" }
           ]
         },
         { id: 37, level: 2, name: '5', type: "link", url: "/detail/http" },

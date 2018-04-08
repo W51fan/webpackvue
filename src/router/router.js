@@ -2,11 +2,13 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import App from '../components/App.vue';
 import TreeViewDetail from '../components/TreeViewDetail.vue';
-import Page01 from '../components/page01.vue'
-import Page02 from '../components/page02.vue'
-import Page03 from '../components/page03.vue'
-import Page04 from '../components/page04.vue'
-import Page05 from '../components/page05.vue'
+// import Page01 from '../components/page01.vue'
+// import Page02 from '../components/page02.vue'
+// import Page03 from '../components/page03.vue'
+// import Page04 from '../components/page04.vue'
+// import Page05 from '../components/page05.vue'
+// import Page06 from '../components/page06.vue'
+// import Page07 from '../components/page07.vue'
 Vue.use(Router)
 export default new Router({
   linkActiveClass: 'selected',
@@ -24,25 +26,25 @@ export default new Router({
         path: '/gaode',
         name: 'gaode',
         //component: Page01
-      component:resolve =>require(['../components/page01.vue'],resolve)
+        component: (resolve) => require(['../components/page01.vue'], resolve)
     },
     {
         path: '/baidu',
         name: 'baidu',
         //component: Page02
-      component:resolve =>require(['../components/page02.vue'],resolve)
+        component: (resolve) => require(['../components/page02.vue'], resolve)
     },
     {
         path: '/guge',
         name: 'google',
         //component: Page03
-      component:resolve =>require(['../components/page03.vue'],resolve)
+        component: (resolve) => require(['../components/page03.vue'], resolve)
     },
     {
         path: '/biying',
         name: 'biying',
         //component: Page04
-      component:resolve =>require(['../components/page04.vue'],resolve)
+        component: (resolve) => require(['../components/page04.vue'], resolve)
     },
     {
       path: '/detail/tutorial',
@@ -60,30 +62,10 @@ export default new Router({
       component: TreeViewDetail
     },
     {
-      path: '/detail/toh-pt3',
-      name: 'toh-pt3',
-      component: TreeViewDetail
-    },
-    {
-      path: '/detail/toh-pt4',
-      name: 'toh-pt4',
-      component: TreeViewDetail
-    },
-    {
-      path: '/detail/toh-pt5',
-      name: 'toh-pt5',
-      component: TreeViewDetail
-    },
-    {
-      path: '/detail/toh-pt6',
-      name: 'toh-pt6',
-      component: TreeViewDetail
-    },
-    {
       path: '/detail/architecture',
       name: 'architecture',
       //component: Page05
-      component:resolve =>require(['../components/page05.vue'],resolve)
+      component: (resolve) => require(['../components/page05.vue'], resolve)
     },
     {
       path: '/detail/displaying-data',
@@ -168,27 +150,32 @@ export default new Router({
     {
       path: '/detail/ngmodule',
       name: 'ngmodule',
-      component: TreeViewDetail
+      //component: Page06
+      component: (resolve) => require(['../components/page06.vue'], resolve)
     },
     {
       path: '/detail/ngmodule-faq',
       name: 'ngmodule-faq',
-      component: TreeViewDetail
+      //component: Page07
+      component: (resolve) => require(['../components/page07.vue'], resolve)
     },
     {
       path: '/detail/dependency-injection',
       name: 'dependency-injection',
-      component: TreeViewDetail
+      //component: Page08
+      component: (resolve) => require(['../components/page08.vue'], resolve)
     },
     {
       path: '/detail/hierarchical-dependency-injection',
       name: 'hierarchical-dependency-injection',
-      component: TreeViewDetail
+      //component: Page09
+      component: (resolve) => require(['../components/page09.vue'], resolve)
     },
     {
       path: '/detail/dependency-injection-in-action',
       name: 'dependency-injection-in-action',
-      component: TreeViewDetail
+        //component: Page10
+        component: (resolve) => require(['../components/page10.vue'], resolve)
     },
     {
       path: '/detail/http',
