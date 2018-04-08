@@ -21,6 +21,7 @@
 <script>
 import Mycheckbox from "./checkbox.vue";
 import Singlebox from "./singlebox.vue";
+import Axios from 'axios'
 
 
     export default {
@@ -45,11 +46,7 @@ import Singlebox from "./singlebox.vue";
         methods:{
             loadingdata(){
                 let host = "http://"+location.host+'/';
-                console.log(host);
-                axios({
-                    method:'get',
-                    url:host+"src/jsons/test.json"
-                }).then(res=>{
+                Axios.get(host+'src/jsons/test.json').then(res=>{
                     alert(res.data.text);
                 }).catch(error =>{
                     alert(error);
