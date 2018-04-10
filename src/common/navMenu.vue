@@ -27,7 +27,7 @@
 </template>
 
 <script>
-  import menu from '../config/menu-config'
+  import menu from '../config/menu-config.js'
   export default {
     data () {
       return {

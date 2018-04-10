@@ -60,8 +60,8 @@ const config = {
 			},
 			{
 				test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
-				use: ['file-loader']
-			},
+				use: ["file-loader"]
+			}   
 		]
 	},
 	plugins:[

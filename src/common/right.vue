@@ -2,7 +2,7 @@
 	<!-- <div id="right">
 		<router-view></router-view>
 	</div> -->
-    <div class="continer">
+    <div>
             <router-view></router-view>
     </div>
 </template>

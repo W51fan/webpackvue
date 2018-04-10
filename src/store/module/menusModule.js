@@ -77,7 +77,7 @@ let menus = [
             { id: 363, level: 3, name: '仪表盘', type: "link", url: "/detail/dependency-injection-in-action" }
           ]
         },
-        { id: 37, level: 2, name: '5', type: "link", url: "/detail/http" },
+        { id: 37, level: 2, name: 'ElementUI', type: "link", url: "/detail/http" },
         { id: 38, level: 2, name: '6', type: "link", url: "/detail/router" },
         { id: 39, level: 2, name: '7', type: "link", url: "/detail/testing" },
         { id: 310, level: 2, name: '8', type: "link", url: "/detail/cheatsheet" },
