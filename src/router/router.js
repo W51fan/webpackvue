@@ -23,25 +23,25 @@ export default new Router({
       component: TreeViewDetail
     },
     {
-        path: '/gaode',
+        path: '/detail/1-1',
         name: 'gaode',
         //component: Page01
         component: (resolve) => require(['../components/page01.vue'], resolve)
     },
     {
-        path: '/baidu',
+        path: '/detail/1-2',
         name: 'baidu',
         //component: Page02
         component: (resolve) => require(['../components/page02.vue'], resolve)
     },
     {
-        path: '/guge',
+        path: '/detail/1-3',
         name: 'google',
         //component: Page03
         component: (resolve) => require(['../components/page03.vue'], resolve)
     },
     {
-        path: '/biying',
+        path: '/detail/1-4',
         name: 'biying',
         //component: Page04
         component: (resolve) => require(['../components/page04.vue'], resolve)
@@ -148,25 +148,25 @@ export default new Router({
       component: TreeViewDetail
     },
     {
-      path: '/detail/ngmodule',
+      path: '/detail/2-2',
       name: 'ngmodule',
       //component: Page06
       component: (resolve) => require(['../components/page06.vue'], resolve)
     },
     {
-      path: '/detail/ngmodule-faq',
+      path: '/detail/2-3',
       name: 'ngmodule-faq',
       //component: Page07
       component: (resolve) => require(['../components/page07.vue'], resolve)
     },
     {
-      path: '/detail/dependency-injection',
+      path: '/detail/2-4',
       name: 'dependency-injection',
       //component: Page08
       component: (resolve) => require(['../components/page08.vue'], resolve)
     },
     {
-      path: '/detail/hierarchical-dependency-injection',
+      path: '/detail/2-1',
       name: 'hierarchical-dependency-injection',
       //component: Page09
       component: (resolve) => require(['../components/page09.vue'], resolve)
