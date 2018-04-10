@@ -1,36 +1,24 @@
 <template>
   <div id="app">
-    <Home></Home>
+    <!-- <Home></Home> -->
+    <Layouts></Layouts>
   </div>
 </template>
 <script>
 import Home from "./Home.vue";
+import Layouts from "./layouts.vue";
 export default {
   components: {
-    Home
+    Home,
+    Layouts
   },
-  name: "App"
+  name: "App",
+  beforeCreate() {
+    console.log("%c======== beforeCreated ========", "color:red");
+    console.log(this.$el);
+    console.log(this.$data);
+    console.log(this.message);
+  },
 };
 </script>
 <style>
-* {
-  padding: 0;
-  margin: 0;
-}
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
-html,
-body,
-#app,
-.home {
-  height: 100%;
-}
-html,
-body {
- overflow: hidden;
-}
-</style>
