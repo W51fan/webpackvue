@@ -1,43 +1,39 @@
 <template>
   <el-row class="tac">
-    <el-col :span="24">
-      <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose"
-      unique-opened
+  <el-col :span="24">
+    <el-menu
+      class="el-menu-vertical-demo"
       router
-      background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
-        <el-submenu index="1">
-          <template slot="title">
-            <i class="el-icon-location"></i>
-            <span>地图</span>
-          </template>
-          <el-menu-item-group>
-            <el-menu-item index="1-1">高德</el-menu-item>
-            <el-menu-item index="1-2">百度</el-menu-item>
-            <el-menu-item index="1-3">谷歌</el-menu-item>
-            <el-menu-item index="1-4">必应</el-menu-item>
-          </el-menu-item-group>
-        </el-submenu>
+      unique-opened
+      @open="handleOpen"
+      @close="handleClose"
+      background-color="#545c64"
+      text-color="#fff"
+      active-text-color="#ffd04b">
 
-        <el-submenu index="2">
-          <template slot="title">
-            <i class="el-icon-location"></i>
-            <span>Echarts</span>
-          </template>
-          <el-menu-item-group>
-            <el-menu-item index="2-1">雷达图</el-menu-item>
-            <el-menu-item index="2-2">柱形图</el-menu-item>
-            <el-menu-item index="2-3">圆饼图</el-menu-item>
-            <el-menu-item index="2-4">散点图</el-menu-item>
-          </el-menu-item-group>
-        </el-submenu>
+      <el-submenu v-for="item in menu" :index="item.id" :key="item.id">
+        <template slot="title">
+          <span v-text="item.name"></span>
+        </template>
+        <el-menu-item-group class="over-hide" v-for="sub in item.sub" :key="sub.componentName">
+          <el-menu-item :index="sub.componentName" v-text="sub.name">
+          </el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
 
-      </el-menu>
-    </el-col>
-  </el-row>
+    </el-menu>
+  </el-col>
+</el-row>
 </template>
 
 <script>
+  import menu from '../config/menu-config'
   export default {
+    data () {
+      return {
+        menu: menu
+      }
+    },
     methods: {
       handleOpen(key, keyPath) {
         console.log(key, keyPath)
