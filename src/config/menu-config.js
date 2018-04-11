@@ -2,6 +2,7 @@ module.exports = [
     {
         name: '地图',
         id: 'basic',
+        icon: 'th-large',
         sub: [
                 {
                     name: '高德',
@@ -24,6 +25,7 @@ module.exports = [
     {
         name: 'Echarts',
         id: 'form',
+        icon: 'columns',
         sub: [
                 {
                     name: '雷达图',
