@@ -16,7 +16,7 @@ export default {
 
 <style scoped>
 .miniContent {
-  background-color: #82afd2a8;
+  background-color: rgba(92, 93, 97, 0.71);
   width: 500px;
   height: 500px;
   position: absolute;

@@ -1,10 +1,18 @@
 <template>
-	<div id="map"></div>
+	<div>
+		<div id="map"></div>
+		<minimap></minimap>
+	</div>
 </template>
 <script>
     import ol from '../assets/libs/ol.js';
-    import '../assets/styles/ol.css';
+	import '../assets/styles/ol.css';
+	import minimap from "./minimap.vue";
     export default{
+		name:'page01',
+		components:{
+			minimap
+		},
         mounted: function () {
 			let googleMapLayer = new ol.layer.Tile({
 				source:new ol.source.XYZ({

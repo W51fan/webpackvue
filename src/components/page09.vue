@@ -23,7 +23,7 @@ import Axios from 'axios'
             let myChart = Echarts.init(document.getElementById('radarContainer'));
             myChart.setOption({
                 title: {
-                    text: "预算 vs 开销",
+                    text: "对手 vs 本部",
                     subtext: "纯属虚构"
                 },
                 tooltip: {
