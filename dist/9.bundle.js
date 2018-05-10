@@ -1,14 +1,14 @@
 webpackJsonp([9],{
 
-/***/ 100:
+/***/ 102:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_selector_type_script_index_0_page01_vue__ = __webpack_require__(1745);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_selector_type_script_index_0_page02_vue__ = __webpack_require__(1773);
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_a0052b32_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_page01_vue__ = __webpack_require__(1755);
-var normalizeComponent = __webpack_require__(6)
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_2caa2ee8_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_page02_vue__ = __webpack_require__(1782);
+var normalizeComponent = __webpack_require__(5)
 /* script */
 
 
@@ -23,8 +23,8 @@ var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_selector_type_script_index_0_page01_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_a0052b32_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_page01_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_selector_type_script_index_0_page02_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_2caa2ee8_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_page02_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -36,7 +36,7 @@ var Component = normalizeComponent(
 
 /***/ }),
 
-/***/ 1734:
+/***/ 1738:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var require;var require;var require;var require;var require;var require;// OpenLayers 3. See http://openlayers.org/
@@ -1061,11 +1061,11 @@ Or.prototype.setTarget=Or.prototype.f;Or.prototype.get=Or.prototype.get;Or.proto
 
 /***/ }),
 
-/***/ 1735:
+/***/ 1739:
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(1736);
+var content = __webpack_require__(1740);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -1112,10 +1112,10 @@ if(false) {
 
 /***/ }),
 
-/***/ 1736:
+/***/ 1740:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(4)(false);
+exports = module.exports = __webpack_require__(6)(false);
 // imports
 
 
@@ -1127,13 +1127,13 @@ exports.push([module.i, ".ol-control,.ol-scale-line{position:absolute;padding:2p
 
 /***/ }),
 
-/***/ 1745:
+/***/ 1773:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__assets_libs_ol_js__ = __webpack_require__(1734);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__assets_libs_ol_js__ = __webpack_require__(1738);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__assets_libs_ol_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__assets_libs_ol_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__assets_styles_ol_css__ = __webpack_require__(1735);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__assets_styles_ol_css__ = __webpack_require__(1739);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__assets_styles_ol_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__assets_styles_ol_css__);
 //
 //
@@ -1143,21 +1143,52 @@ exports.push([module.i, ".ol-control,.ol-scale-line{position:absolute;padding:2p
     
     /* harmony default export */ __webpack_exports__["a"] = ({
         mounted: function () {
-			let googleMapLayer = new __WEBPACK_IMPORTED_MODULE_0__assets_libs_ol_js___default.a.layer.Tile({
-				source:new __WEBPACK_IMPORTED_MODULE_0__assets_libs_ol_js___default.a.source.XYZ({
-					url:"http://wprd0{1-4}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&style=7&x={x}&y={y}&z={z}"
-				})
-			});
+            var projection = __WEBPACK_IMPORTED_MODULE_0__assets_libs_ol_js___default.a.proj.get("EPSG:3857");
+            var resolutions = [];
+            for (var i = 0; i < 19; i++) {
+                resolutions[i] = Math.pow(2, 18 - i);
+            }
+            var tilegrid = new __WEBPACK_IMPORTED_MODULE_0__assets_libs_ol_js___default.a.tilegrid.TileGrid({
+                origin: [0, 0],
+                resolutions: resolutions
+            });
+
+            var baidu_source = new __WEBPACK_IMPORTED_MODULE_0__assets_libs_ol_js___default.a.source.TileImage({
+                projection: projection,
+                tileGrid: tilegrid,
+                tileUrlFunction: function (tileCoord, pixelRatio, proj) {
+                    if (!tileCoord) {
+                        return "";
+                    }
+                    var z = tileCoord[0];
+                    var x = tileCoord[1];
+                    var y = tileCoord[2];
+
+                    if (x < 0) {
+                        x = "M" + (-x);
+                    }
+                    if (y < 0) {
+                        y = "M" + (-y);
+                    }
+
+                    return "http://online3.map.bdimg.com/onlinelabel/?qt=tile&x=" + x + "&y=" + y + "&z=" + z + "&styles=pl&udt=20151021&scaler=1&p=1&ak=E4805d16520de693a3fe707cdc962045&customid=midnight";
+                }
+            });
+
+            var baidu_layer = new __WEBPACK_IMPORTED_MODULE_0__assets_libs_ol_js___default.a.layer.Tile({
+                source: baidu_source
+            });
+			
 			let map = new __WEBPACK_IMPORTED_MODULE_0__assets_libs_ol_js___default.a.Map({
 				layers: [
-					googleMapLayer
+					baidu_layer
 				],
 				target: 'map',
 				view: new __WEBPACK_IMPORTED_MODULE_0__assets_libs_ol_js___default.a.View({
 					center: [12959773,4853101],
 					zoom: 12
-				}),
-				controls: __WEBPACK_IMPORTED_MODULE_0__assets_libs_ol_js___default.a.control.defaults({
+                }),
+                controls: __WEBPACK_IMPORTED_MODULE_0__assets_libs_ol_js___default.a.control.defaults({
 								zoom: false,
 								attribution: false
 				}),
@@ -1168,7 +1199,7 @@ exports.push([module.i, ".ol-control,.ol-scale-line{position:absolute;padding:2p
 
 /***/ }),
 
-/***/ 1755:
+/***/ 1782:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
