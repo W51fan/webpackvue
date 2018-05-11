@@ -42,7 +42,16 @@ module.exports = [
                 {
                     name: '散点图',
                     componentName: '/detail/2-4'
+                }, 
+                {
+                    name: '仪表图',
+                    componentName: '/detail/2-5'
+                }, 
+                {
+                    name: '地图',
+                    componentName: '/detail/2-6'
                 }
+
         ]
     }
 ]

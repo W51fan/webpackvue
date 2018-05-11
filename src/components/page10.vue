@@ -9,7 +9,7 @@ import Axios from 'axios'
 
 
     export default {
-        name:"Page06",
+        name:"Page10",
         components: {
             
         },
@@ -32,10 +32,10 @@ import Axios from 'axios'
                             show: true
                         },
                         restore: {
-                            show: true
+                            show: false
                         },
                         saveAsImage: {
-                            show: true
+                            show: false
                         }
                     }
                 },

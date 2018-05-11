@@ -44,7 +44,7 @@ export default {
       target: "map",
       view: new ol.View({
         center: [12959773, 4853101],
-        zoom: 12
+        zoom: 7
       }),
       controls: ol.control.defaults({
         zoom: false,
@@ -86,7 +86,7 @@ export default {
     },
     loadpolygon() {
       let host = "http://" + location.host + "/";
-      Axios.get(host + "src/jsons/geoJson.json")
+      Axios.get(host + "src/jsons/china.json")
         .then(res => {
           debugger;
           var features = {

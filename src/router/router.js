@@ -148,6 +148,12 @@ export default new Router({
       component: TreeViewDetail
     },
     {
+      path: '/detail/2-1',
+      name: 'hierarchical-dependency-injection',
+      //component: Page09
+      component: (resolve) => require(['../components/page09.vue'], resolve)
+    },
+    {
       path: '/detail/2-2',
       name: 'ngmodule',
       //component: Page06
@@ -166,16 +172,16 @@ export default new Router({
       component: (resolve) => require(['../components/page08.vue'], resolve)
     },
     {
-      path: '/detail/2-1',
-      name: 'hierarchical-dependency-injection',
-      //component: Page09
-      component: (resolve) => require(['../components/page09.vue'], resolve)
+      path: '/detail/2-5',
+      name: 'dependency-injection',
+      //component: Page08
+      component: (resolve) => require(['../components/page10.vue'], resolve)
     },
     {
-      path: '/detail/dependency-injection-in-action',
+      path: '/detail/2-6',
       name: 'dependency-injection-in-action',
         //component: Page10
-        component: (resolve) => require(['../components/page10.vue'], resolve)
+        component: (resolve) => require(['../components/page11.vue'], resolve)
     },
     {
       path: '/detail/http',
