@@ -20,19 +20,19 @@ export default {
     Axios.get(host + "src/jsons/china.json").then(res => {
       Echarts.registerMap("china", res.data);
       let myChart = Echarts.init(document.getElementById("gaugeContainer"));
-      var convertData = function (data) {
+      var convertData = function(data) {
         var res = [];
         for (var i = 0; i < data.features.length; i++) {
-            var geoCoord = data.features[i].properties.name;
-            if (geoCoord == "广东") {
-                res.push({
-                    name: data.features[i].properties.name,
-                    value: geoCoord
-                });
-            }
+          var geoCoord = data.features[i].properties.name;
+          if (geoCoord == "广东") {
+            res.push({
+              name: data.features[i].properties.name,
+              value: geoCoord
+            });
+          }
         }
         return res;
-    };
+      };
       myChart.setOption({
         tooltip: {
           trigger: "item",
@@ -51,6 +51,12 @@ export default {
           textStyle: {
             color: "#fff"
           } //提示标签字体颜色
+        },
+        legend: {
+          show: true,
+          orient: "horizontal",
+          left: "left",
+          data: ["china"]
         },
         // geo: {
         //   map: "guangdong",

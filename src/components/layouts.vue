@@ -18,17 +18,19 @@
 </template>
 
 <script>
-import Header from '../common/header.vue';
-import navMenu from '../common/navMenu.vue';
-import Right from '../common/right.vue';
-import {Button, Container, Header, Main, Aside, Input} from 'element-ui'
-    export default{
-        components:{
-            Header,
-            navMenu,
-            Right
-        },
-    }
+import Header from "../common/header.vue";
+import navMenu from "../common/navMenu.vue";
+import Right from "../common/right.vue";
+import { Button, Container, Header, Main, Aside, Input } from "element-ui";
+
+export default {
+  components: {
+    Header,
+    navMenu,
+    Right
+  },
+  name: "layouts"
+};
 </script>
 
 <style lang="stylus" scoped>
@@ -37,25 +39,27 @@ import {Button, Container, Header, Main, Aside, Input} from 'element-ui'
     color: #333;
     text-align: center;
     line-height: 60px;
-  }
-  
-  .el-aside {
+}
+
+.el-aside {
     background-color: #D3DCE6;
     color: #333;
     text-align: center;
     line-height: 200px;
-  }
-  
-  .el-main {
+}
+
+.el-main {
     background-color: #E9EEF3;
     color: #333;
     text-align: center;
     line-height: 160px;
-  }
-  .el-input__inner{
-      width: 200px;
-  }
-  body > .el-container {
+}
+
+.el-input__inner {
+    width: 200px;
+}
+
+body > .el-container {
     margin-bottom: 40px;
-  }
+}
 </style>
