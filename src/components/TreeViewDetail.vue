@@ -1,7 +1,7 @@
 <template>
     <div>
         <h3>
-            欢迎光临！
+            欢迎光临！  
         </h3>
         <router-view></router-view>
     </div>
