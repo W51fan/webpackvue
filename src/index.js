@@ -14,7 +14,7 @@ import NormailizeCss from 'normalize.css'
 import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon.vue'
 import menus from './config/menu-config'
-
+import $ from 'jquery'
 //Vue.use(Axios)
 Vue.prototype.$http = Axios
 // Vue.use(VueAxios)

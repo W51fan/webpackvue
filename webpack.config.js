@@ -3,21 +3,20 @@ const HTMLplugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 
 const config = {
-	target:"web",
-	entry:__dirname+"/src/index.js",
-	output:{
-		filename:"bundle.js",
-		path:__dirname+"/dist"
+	target: "web",
+	entry: __dirname + "/src/index.js",
+	output: {
+		filename: "bundle.js",
+		path: __dirname + "/dist"
 	},
-	module:{
-		rules:[
-			{
-				test:/\.vue$/,
-				use:"vue-loader"
+	module: {
+		rules: [{
+				test: /\.vue$/,
+				use: "vue-loader"
 			},
 			{
-				test:/\.css$/,
-				use:[
+				test: /\.css$/,
+				use: [
 					"style-loader",
 					"css-loader"
 				]
@@ -47,44 +46,47 @@ const config = {
 				]
 			},
 			{
-				test:/\.(gif||jpg||jpeg||png||svg)$/,
-				use:[
-					{
-						loader:"url-loader",
-						options:{
-							limit:1024,
-							name:"[name].[ext]"
-						}
+				test: /\.(gif||jpg||jpeg||png||svg)$/,
+				use: [{
+					loader: "url-loader",
+					options: {
+						limit: 1024,
+						name: "[name].[ext]"
 					}
-				]
+				}]
 			},
 			{
 				test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
 				use: ["file-loader"]
-			}   
+			}
 		]
 	},
-	plugins:[
+	plugins: [
 		new webpack.DefinePlugin({
 			'process.env': {
-				NODE_ENV: isDev?'"development"':'"production"'
+				NODE_ENV: isDev ? '"development"' : '"production"'
 			}
 		}),
 		new HTMLplugin({
 
+		}),
+		new webpack.optimize.CommonsChunkPlugin('common.js'),
+		new webpack.ProvidePlugin({
+			$: "jquery",
+			jQuery: "jquery"
 		})
 	]
 }
 
-if(isDev){
+if (isDev) {
 	config.devtool = '#cheap-module-eval-source'
-	config.devServer ={
-		port:8000,
-		host:"0.0.0.0",
-		overlay:{
-			errors:true
+	config.devServer = {
+		port: 8000,
+		host: "0.0.0.0",
+		overlay: {
+			errors: true
 		},
-		hot:true,
+		hot: true,
 	}
 	config.plugins.push(
 		new webpack.HotModuleReplacementPlugin(),
