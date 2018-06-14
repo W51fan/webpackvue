@@ -1,6 +1,7 @@
 const isDev = process.env.NODE_ENV === 'development'
 const HTMLplugin = require('html-webpack-plugin')
 const webpack = require('webpack')
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 const config = {
 	target: "web",
@@ -82,7 +83,7 @@ if (isDev) {
 	config.devtool = '#cheap-module-eval-source'
 	config.devServer = {
 		port: 8000,
-		host: "0.0.0.0",
+		host: "localhost",
 		overlay: {
 			errors: true
 		},
@@ -90,7 +91,8 @@ if (isDev) {
 	}
 	config.plugins.push(
 		new webpack.HotModuleReplacementPlugin(),
-		new webpack.NoEmitOnErrorsPlugin()
+		new webpack.NoEmitOnErrorsPlugin(),
+		new OpenBrowserPlugin({ url: 'http://localhost:8000' })
 	)
 }
 
